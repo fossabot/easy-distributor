@@ -1,0 +1,30 @@
+[
+  {
+    "object_name": "sample01",
+		"display_name": "SAMPLE-01",
+		"file_name": "sample01.txt",
+		"keys": [{
+			"key": "12345",
+			"count": "0",
+			"max": "-1"
+		}, {
+			"key": "67890",
+			"count": "0",
+			"max": "-1"
+		}]
+	},
+	{
+		"object_name": "sample02",
+		"display_name": "SAMPLE-02",
+		"file_name": "sample02.txt",
+		"keys": [{
+			"key": "abcde",
+			"count": "0",
+			"max": "-1"
+		}, {
+			"key": "fghij",
+			"count": "0",
+			"max": "-1"
+		}]
+	}
+]

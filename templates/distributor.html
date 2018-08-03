@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Easy Distributor</title>
+  <meta name="description" content="">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="container">
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <h1>Easy Distributor</h1>
+        <p class="lead"></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    {% from "_formhelpers.html" import render_field, render_field_wo_label %}
+    <form method=post>
+      <div>{{ render_field(form.file_selector, class_="form-control", size="4") }}</div>
+      <div>{{ render_field(form.input, class_="form-control", rows="1") }}</div>
+      <div class="center">{{ render_field_wo_label(form.btn, class_="btn btn-primary btn-lg btn-block") }}</div>
+    </form>
+  </div>
+
+  <footer class="container">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <hr class="small">
+        <p class="text-muted small"><a href="https://github.com/ebiiim/easy-distributor" target="_blank"><i class="fa fa-github"></i> easy-distributor</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
