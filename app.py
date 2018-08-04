@@ -31,7 +31,8 @@ def download():
             if selected == each['file_name']:
                 for each_key in each['keys']:
                     if input_str == each_key['key']:
-                        # TODO: [implement] download counter
+                        # TODO: [feature] download counter
+                        # TODO: [feature] duration checker
                         is_good_key = True
                         break
 
