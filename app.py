@@ -18,8 +18,8 @@ def download():
     if request.method == 'POST' and form.validate():
         input_str = form.input.data
         selected = form.file_selector.data
-        logger.info('input: ' + input_str)
-        logger.info('file: ' + selected)
+        logger.warning('input: ' + input_str)
+        logger.warning('file: ' + selected)
 
         # check download key
         is_good_key = False
@@ -37,12 +37,12 @@ def download():
                         break
 
         if is_good_key:
-            logger.info('verified')
+            logger.warning('verified')
             file_path = os.path.dirname(os.path.abspath(__file__)) + '/static/' + selected
             logger.debug(file_path)
             return send_file(file_path, as_attachment=True)
         else:
-            logger.info('incorrect key')
+            logger.warning('incorrect key')
             return render_template('error.html', err='INCORRECT DOWNLOAD KEY')
 
     return render_template('distributor.html', form=form, result=result)
