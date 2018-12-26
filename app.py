@@ -23,7 +23,7 @@ def download():
 
         # check download key
         is_good_key = False
-        _settings_file = os.path.dirname(os.path.abspath(__file__)) + '/static/' + 'files.json'
+        _settings_file = os.path.dirname(os.path.abspath(__file__)) + '/data/' + 'files.json'
         with open(_settings_file, 'r') as f:
             json_data = json.loads(f.read())
 
@@ -38,7 +38,7 @@ def download():
 
         if is_good_key:
             logger.warning('verified')
-            file_path = os.path.dirname(os.path.abspath(__file__)) + '/static/' + selected
+            file_path = os.path.dirname(os.path.abspath(__file__)) + '/data/' + selected
             logger.debug(file_path)
             return send_file(file_path, as_attachment=True)
         else:

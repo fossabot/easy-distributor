@@ -5,7 +5,7 @@ from wtforms import Form, validators, StringField, SelectField, SubmitField
 
 class PostForm(Form):
 
-    _settings_file = os.path.dirname(os.path.abspath(__file__)) + '/static/' + 'files.json'
+    _settings_file = os.path.dirname(os.path.abspath(__file__)) + '/data/' + 'files.json'
     with open(_settings_file, 'r') as f:
         json_data = json.loads(f.read())
 
